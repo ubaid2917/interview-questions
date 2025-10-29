@@ -227,3 +227,33 @@ function countOccurance(str){
 console.log(countOccurance('aabbcdde')) //  { a: 2, b: 2, c: 1, d: 2, e: 1 }
 
 ```
+#
+
+
+### Question no 6
+-  Make a function which take string as argument and check is string is anagram or not
+  
+  ### input 
+  ``` 
+   1. silent, listen  ==>  true
+   
+  ```
+
+#### Solution (with builitin method)
+```javascript
+function isAnagramString(str1, str2){
+ 
+  let sortedOne = str1.split('').sort().join('');
+  let sortedTwo = str2.split('').sort().join('');
+  
+    if(sortedOne === sortedTwo){
+      return true
+    }else{
+      return false
+    }
+   
+}
+  
+console.log(isAnagramString('silent', 'listen')) //  true
+console.log(isAnagramString('allergy', 'allergyy')) //  false
+```

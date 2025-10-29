@@ -185,7 +185,7 @@ function nonRepeatingChar(str){
   return res;
 }
   
-console.log(nonRepeatingChar('aabbcdde'))
+console.log(nonRepeatingChar('aabbcdde'))  // c
 ```
 
 #### Explanation

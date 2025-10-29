@@ -9,7 +9,7 @@
 input is ```ubaid``` and output will be ```diabu```
 
 
-#### Example
+#### Solution
 ```javascript
 function reverseStr(str){
   let rev = ''; 
@@ -34,7 +34,7 @@ console.log(reverseStr('ubaid')) // diabu
    2. ubaid ==>   false
   ```
 
-#### Example (with builitin method)
+#### Solution (with builitin method)
 ```javascript
 function palindromStr(str){
   str = str.toLowerCase().replace(/[^0-9a-z]/g, '')
@@ -50,7 +50,7 @@ console.log(palindromStr('Madam'))   // true
 console.log(palindromStr('Race Car')) // true
 ```
 
-#### Example (without builitin method)
+#### Solution (without builitin method)
 ```javascript
 function palindromStr(str){
   str =  str.toLowerCase().replace(/[^0-9a-z]/g, '') 
@@ -82,8 +82,7 @@ console.log(palindromStr('Race Car')) /// true
 2. Move left forward and right backward.
 3. If any characters don’t match → return false.
 4. If all characters match → return true.
-
-
+#
 
 ### Question no 3
 -  Count Vowels in the string
@@ -94,7 +93,7 @@ console.log(palindromStr('Race Car')) /// true
    2. pakistan ==>  3 
   ```
 
-#### Example (with builitin method)
+#### Solution (with builitin method)
 ```javascript
 function countVowles(str){
   let vowels = ['a','e','i','o','u']
@@ -115,7 +114,7 @@ console.log(palindromStr('pakistan'))  // 3
 
 ```
 
-#### Example (without builitin method)
+#### Solution (without builitin method)
 ```javascript
 function countVowles(str){
  
@@ -146,4 +145,50 @@ console.log(countVowles('ubaid')) // 3
 1. First Manually Convert all character to lowercase.
 2. Manually Check Vowels
 3. If any character exist then increment counter
+#
+
+### Question no 4
+-  Make a function which take string as argument and find the first non repeating character in string
+  
+  ### input 
+  ``` 
+   1. aabbcdde  ==>  c
+   2. pakistan ==>  p 
+  ```
+
+#### Solution (with builitin method)
+```javascript
+function nonRepeatingChar(str){
+ 
+  let res = ''; 
+  let isSeen = {};
+  
+  // Count each character
+    for(let i = 0; i<str.length; i++){
+      let char = str[i].toLowerCase(); 
+      if(isSeen[char]){
+        isSeen[char] ++
+      }else{
+        isSeen[char] = 1
+      }
+    }  
+    
+    // Find first non-repeating character
+    for(let i = 0; i<str.length; i++){
+      let char = str[i].toLowerCase();
+      if(isSeen[char] === 1){
+        res = char
+        break
+      }
+    }
+   
+  return res;
+}
+  
+console.log(nonRepeatingChar('aabbcdde'))
+```
+
+#### Explanation
+1. First Manually Count all character in first loop.
+2. Manually find the first non repeating character
 

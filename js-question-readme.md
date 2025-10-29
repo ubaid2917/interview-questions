@@ -192,3 +192,38 @@ console.log(nonRepeatingChar('aabbcdde'))  // c
 1. First Manually Count all character in first loop.
 2. Manually find the first non repeating character
 
+
+#
+
+### Question no 5
+-  Make a function which take string as argument and count each occurance of charcter
+  
+  ### input 
+  ``` 
+   1. aabbcdde  ==>  { a: 2, b: 2, c: 1, d: 2, e: 1 }
+   
+  ```
+
+#### Solution (with builitin method)
+```javascript
+function countOccurance(str){
+ 
+  let isSeen = {};
+  
+  // Count each character
+   for(let i = 0; i<str.length; i++){
+     let char = str[i].toLowerCase(); 
+      
+      if(isSeen[char]){
+        isSeen[char] ++
+      }else{
+        isSeen[char] = 1;
+      }
+   }
+   
+  return isSeen;
+}
+  
+console.log(countOccurance('aabbcdde')) //  { a: 2, b: 2, c: 1, d: 2, e: 1 }
+
+```

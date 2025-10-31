@@ -257,3 +257,26 @@ function isAnagramString(str1, str2){
 console.log(isAnagramString('silent', 'listen')) //  true
 console.log(isAnagramString('allergy', 'allergyy')) //  false
 ```
+
+
+### Question no 7
+-   Capitalize the first letter of each word
+  
+  ### input 
+  ``` 
+   1. "hello ubaid naeem"  ==>  Hello Ubaid Naeem
+   
+  ```
+
+#### Solution (with builitin method)
+```javascript
+
+ function capatilizedChar(str){
+    return str.split(' ')
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(' ')
+  }
+  console.log(capatilizedChar('hello this is ubaid naeem'))
+// Hello This Is Ubaid Naeem
+
+```

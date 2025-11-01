@@ -386,4 +386,59 @@ console.log(capitalizedStr('hi this is ubaid naeem'))
       Then clear current to start the next word.
 7. After the loop ends, check the last word (because it may not end with a space).
 8. Finally, return longest — that’s the longest word in the string.
+
 #
+
+
+### Question no 9
+-  Make a function which take string as argument and count the total words in string
+  
+  ### input 
+  ``` 
+   1. "hi i am learning javascript"  ==>  5
+   
+  ```
+
+#### Solution (with builitin method)
+```javascript
+function countWord(str) {
+  let words = str.split(' ');   
+  console.log(words.length);    
+}
+
+countWord('hi i am learning javascript');
+   // 5
+```
+
+#### Solution (without builitin method)
+```javascript
+function countWord(str) {
+  let count = 0;
+  let inWord = false;
+
+  for (let i = 0; i < str.length; i++) {
+    let ch = str[i];
+
+    if (ch !== " " && !inWord) {
+      count++;
+      inWord = true;
+    } else if (ch === " ") {
+      inWord = false; 
+    }
+  }
+
+  console.log(count);
+}
+
+countWord('i am learning js');
+
+// javascript
+
+```
+#### Explanation
+1. count keeps track of how many words are found.
+2. inWord tells if we are currently inside a word.
+3. For each character
+4. If it’s not a space and we are not already in a word → new word starts → increase count.
+5. If it’s a space, that means the word ended.
+6. Finally, print count — total number of words in the sentence.

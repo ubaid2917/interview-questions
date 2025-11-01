@@ -257,6 +257,7 @@ function isAnagramString(str1, str2){
 console.log(isAnagramString('silent', 'listen')) //  true
 console.log(isAnagramString('allergy', 'allergyy')) //  false
 ```
+#
 
 
 ### Question no 7
@@ -315,5 +316,74 @@ console.log(capitalizedStr('hi this is ubaid naeem'))
 5. Otherwise, add the character as it is to result.
 6. If the current character is a space, set capitalizeNext back to true so the next letter will be capitalized.
 7. After the loop finishes, return the final result.
+#
 
+### Question no 8
+-  Make a function which take string as argument and find the longest word in string
+  
+  ### input 
+  ``` 
+   1. "hi i am learning javascript"  ==>  javascript
+   
+  ```
+
+#### Solution (with builitin method)
+```javascript
+   function longestString(str){
+    let words = str.split(' ');
+    let longest = ''; 
+
+    for(let word of words){
+      if(word.length > longest.length){
+        longest = word;
+      }
+    } 
+
+    return longest;
+   } 
+   console.log(longestString('hi i am learning javascript')) 
+
+   // javascript
+```
+
+#### Solution (without builitin method)
+```javascript
+  function longestStr(str){
+    let longest = ''; 
+    let current = ''; 
+    
+    for(let i = 0; i<str.length; i++){
+      let ch = str[i]; 
+      
+      if(ch !== " "){
+         current += ch
+      }else {
+         if(current.length > longest.length){
+           longest = current
+         }
+         
+         current = ""
+      }
+    }
+    
+    if(current.length > longest.length){
+      longest = current
+    }
+    return longest
+  }
+  console.log(longestStr('i am learning javascript'))
+// javascript
+
+```
+#### Explanation
+1. longest stores the longest word found so far.
+2. current stores the word that’s currently being built.
+3. Loop through each character one by one.
+4. If the character is not a space, add it to current.
+5. If you find a space, that means the word has ended:
+6. Compare current with longest.
+      If current is longer, update longest.
+      Then clear current to start the next word.
+7. After the loop ends, check the last word (because it may not end with a space).
+8. Finally, return longest — that’s the longest word in the string.
 #

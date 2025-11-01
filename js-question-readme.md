@@ -278,5 +278,42 @@ console.log(isAnagramString('allergy', 'allergyy')) //  false
   }
   console.log(capatilizedChar('hello this is ubaid naeem'))
 // Hello This Is Ubaid Naeem
+```
+
+#### Solution (without builitin method)
+```javascript
+ function capitalizedStr(str){
+  
+  let res = ''; 
+  let capitalizedNext = true; 
+  
+  for(let i = 0; i<str.length; i++){
+    let char = str[i]; 
+    
+    if(capitalizedNext && char !== ' '){
+      res += char.toUpperCase(); 
+      capitalizedNext = false
+    }else{
+      res += char;
+    } 
+      
+    if(char === " "){
+      capitalizedNext = true
+    }
+  }
+  return res
+}
+console.log(capitalizedStr('hi this is ubaid naeem')) 
+// Hi This Is Ubaid Naeem
 
 ```
+#### Explanation
+1. Create an empty string result 
+2. and a flag capitalizeNext = true.
+3. Loop through each character in the input string.
+4. If capitalizeNext is true, convert the current character to uppercase and set the flag to false.
+5. Otherwise, add the character as it is to result.
+6. If the current character is a space, set capitalizeNext back to true so the next letter will be capitalized.
+7. After the loop finishes, return the final result.
+
+#

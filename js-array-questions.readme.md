@@ -1,5 +1,11 @@
+# JavaScript Questions 
+
+
+
+## Array Questions 
+
 ### Question no 1
--  Make a function which take array as argument and reverse the string
+-  Make a function which take array as argument and reverse the array
   
   ### input 
   ``` 

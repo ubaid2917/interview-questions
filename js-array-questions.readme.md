@@ -41,3 +41,58 @@ function reverseArr(arr){
 }
 console.log(reverseArr([10,20,30,40,50,60,70,80]))
 ```
+#
+
+### Question no 2
+-  Make a function which take array as argument and find the min and max number
+  
+  ### input 
+  ``` 
+   [-1,10,20,30,40,50,60,70,80]
+   
+  ```
+
+  ### outpt 
+  ``` 
+  {min: -1, max: 80}
+   
+  ```
+
+#### Solution (with builitin method)
+```javascript
+function minAndMax(arr){
+  let min = Math.min(...arr);
+  let max = Math.max(...arr); 
+
+   return {
+    min, 
+    max
+   }
+ 
+}
+console.log(minAndMax([-1,10,20,30,40,50,60,70,80]))
+```
+
+#### Solution (without builitin method)
+```javascript
+
+function minAndMax(arr){
+  let min = arr[0];
+  let max = arr[0]; 
+   
+   for(let i  =0; i<arr.length; i++){
+     if(min > arr[i]){
+       min = arr[i]
+     } 
+     
+     if(max < arr[i]){
+       max = arr[i]
+     }
+   }
+  return {
+    min, max
+  }
+} 
+console.log(minAndMax([-1,10,20,30,40,50,60,70,80]))
+```
+#

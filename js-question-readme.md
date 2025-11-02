@@ -442,3 +442,4 @@ countWord('i am learning js');
 4. If it’s not a space and we are not already in a word → new word starts → increase count.
 5. If it’s a space, that means the word ended.
 6. Finally, print count — total number of words in the sentence.
+

@@ -1,98 +1,147 @@
-# JavaScript Questions 
+# JavaScript Questions
 
-
-
-## Array Questions 
+## Array Questions
 
 ### Question no 1
--  Make a function which take array as argument and reverse the array
-  
-  ### input 
-  ``` 
-   [10,20,30,40,50,60,70,80]  
-   
-  ```
 
-  ### outpt 
-  ``` 
-  [ 80, 70, 60, 50, 40, 30, 20, 10]
-   
-  ```
+- Make a function which take array as argument and reverse the array
+
+### input
+
+```
+ [10,20,30,40,50,60,70,80]
+
+```
+
+### outpt
+
+```
+[ 80, 70, 60, 50, 40, 30, 20, 10]
+
+```
 
 #### Solution (with builitin method)
+
 ```javascript
-function reverseArr(arr){
-  let res = arr.reverse(...arr); 
-   return res
- 
+function reverseArr(arr) {
+  let res = arr.reverse(...arr);
+  return res;
 }
-console.log(reverseArr([10,20,30,40,50,60,70,80]))
+console.log(reverseArr([10, 20, 30, 40, 50, 60, 70, 80]));
 ```
 
 #### Solution (without builitin method)
+
 ```javascript
-function reverseArr(arr){
-  let res = []; 
-  
-  for(let i = arr.length -1; i>= 0; i--){
+function reverseArr(arr) {
+  let res = [];
+
+  for (let i = arr.length - 1; i >= 0; i--) {
     res.push(arr[i]);
   }
   return res;
 }
-console.log(reverseArr([10,20,30,40,50,60,70,80]))
+console.log(reverseArr([10, 20, 30, 40, 50, 60, 70, 80]));
 ```
+
 #
 
 ### Question no 2
--  Make a function which take array as argument and find the min and max number
-  
-  ### input 
-  ``` 
-   [-1,10,20,30,40,50,60,70,80]
-   
-  ```
 
-  ### outpt 
-  ``` 
-  {min: -1, max: 80}
-   
-  ```
+- Make a function which take array as argument and find the min and max number
+
+### input
+
+```
+ [-1,10,20,30,40,50,60,70,80]
+
+```
+
+### outpt
+
+```
+{min: -1, max: 80}
+
+```
 
 #### Solution (with builitin method)
-```javascript
-function minAndMax(arr){
-  let min = Math.min(...arr);
-  let max = Math.max(...arr); 
 
-   return {
-    min, 
-    max
-   }
- 
+```javascript
+function minAndMax(arr) {
+  let min = Math.min(...arr);
+  let max = Math.max(...arr);
+
+  return {
+    min,
+    max,
+  };
 }
-console.log(minAndMax([-1,10,20,30,40,50,60,70,80]))
+console.log(minAndMax([-1, 10, 20, 30, 40, 50, 60, 70, 80]));
 ```
 
 #### Solution (without builitin method)
-```javascript
 
-function minAndMax(arr){
+```javascript
+function minAndMax(arr) {
   let min = arr[0];
-  let max = arr[0]; 
-   
-   for(let i  =0; i<arr.length; i++){
-     if(min > arr[i]){
-       min = arr[i]
-     } 
-     
-     if(max < arr[i]){
-       max = arr[i]
-     }
-   }
-  return {
-    min, max
+  let max = arr[0];
+
+  for (let i = 0; i < arr.length; i++) {
+    if (min > arr[i]) {
+      min = arr[i];
+    }
+
+    if (max < arr[i]) {
+      max = arr[i];
+    }
   }
-} 
-console.log(minAndMax([-1,10,20,30,40,50,60,70,80]))
+  return {
+    min,
+    max,
+  };
+}
+console.log(minAndMax([-1, 10, 20, 30, 40, 50, 60, 70, 80]));
+```
+
+#
+
+#
+
+### Question no 2
+
+- Make a function which take array as argument and grouped same element into new array
+
+### input
+
+```
+ [1,2,3,1,2,3,4,5,6,7]
+
+```
+
+### outpt
+
+```
+[
+[ 1, 1 ], [ 2, 2 ],
+[ 3, 3 ], [ 4 ],
+[ 5 ],    [ 6 ],
+[ 7 ]
+]
+
+```
+
+#### Solution (with builitin method)
+
+```javascript
+function groupedSameItem(arr){
+  let res = {}; 
+  
+  for(let v of arr){
+    res[v] = res[v] ? [...res[v], v] : [v]
+  } 
+  const grouped = Object.values(res); 
+  return grouped
+}
+console.log(groupedSameItem([1,2,3,1,2,3,4,5,6,7]))
 ```
 #

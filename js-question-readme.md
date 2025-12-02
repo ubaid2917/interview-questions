@@ -52,28 +52,36 @@ console.log(palindromStr('Race Car')) // true
 
 #### Solution (without builitin method)
 ```javascript
-function palindromStr(str){
-  str =  str.toLowerCase().replace(/[^0-9a-z]/g, '') 
+function palindrom(str){
+  let cleaned = ""; 
   
-  let left = 0;
-  let right = str.length - 1; 
-  
-  while(left < right){
-    if(str[left] !== str[right]){
-      return false
+  for(let i = 0; i<str.length; i++){
+    let code = str.charCodeAt(i); 
+    
+    if(code >= 65 && code <= 90){
+      code = code + 32;
     }
-    return true
-  }
-  
-  left++
-  right-- 
-  
+    let ch = String.fromCharCode(code)
+  }  
+  let left = 0; 
+  let right = str.length - 1;
+      
+      
+      while(left < right){
+        if(cleaned[left] !== cleaned[right]){
+          return false
+        }
+        left++
+      right--
+      } 
+      return true
+      
 }
-  
-console.log(palindromStr('ubaid')) // false
-console.log(palindromStr('madam')) // true
-console.log(palindromStr('Madam')) // true
-console.log(palindromStr('Race Car')) /// true
+
+console.log(palindrom('ubaid')) // false
+console.log(palindrom('madam')) // true
+console.log(palindrom('Madam')) // true
+console.log(palindrom('Race Car')) /// true
 
 ```
 

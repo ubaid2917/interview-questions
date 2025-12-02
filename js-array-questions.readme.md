@@ -107,7 +107,7 @@ console.log(minAndMax([-1, 10, 20, 30, 40, 50, 60, 70, 80]));
 
 #
 
-### Question no 2
+### Question no 3
 
 - Make a function which take array as argument and grouped same element into new array
 
@@ -145,3 +145,52 @@ function groupedSameItem(arr){
 console.log(groupedSameItem([1,2,3,1,2,3,4,5,6,7]))
 ```
 #
+
+### Question no 4
+
+- Make a function which take array as argument and remove falsy values from array
+
+### input
+
+```
+ [0,1,false,2,"",3,undefined]
+
+```
+
+### outpt
+
+```
+[ 1, 2, 3 ]
+```
+
+#### Solution (with builitin method)
+
+```javascript
+function removeFalsy(arr){
+   return arr.filter(Boolean)
+}
+console.log(removeFalsy([0,1,false,2,"",3,undefined]))
+
+// [ 1, 2, 3 ]
+```
+#
+
+#### Solution (without builitin method)
+
+```javascript
+function removeFalsy(arr){
+   let result = []; 
+
+   for(let i = 0; i<arr.length; i++){
+    if(arr[i]){
+      result[result.length] = arr[i]
+    }
+   } 
+   return result
+}
+console.log(removeFalsy([0,1,false,2,"",3,undefined]))
+
+// [ 1, 2, 3 ]
+```
+#
+

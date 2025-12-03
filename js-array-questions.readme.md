@@ -239,3 +239,42 @@ console.log(febinochiSeries(5))
 // [ 0 1 1 2 3 5 ]
 ```
 #
+
+### Question no 5
+
+- Write a function to move all the zeros to the end.  
+
+### input
+
+```
+ [1,0,0,2,0,3,1,6,7]
+
+```
+
+### outpt
+
+```
+[ 1, 2, 3, 1, 6, 7, 0, 0,0] 
+```
+#### Solution
+```javascript
+function moveZero(arr){
+  let zeroNums = []; 
+  let nonZeroNums = []; 
+   
+   for(let i = 0; i<arr.length; i++){
+    if(arr[i] > 0){
+      nonZeroNums.push(arr[i])
+    }else{
+      zeroNums.push(arr[i])
+    }
+   } 
+
+   return [...nonZeroNums, ...zeroNums]
+}
+console.log(moveZero([1,0,0,2,0,3,1,,6,7]))
+
+// [ 1, 2, 3, 1, 6, 7, 0, 0,0]
+
+```
+#

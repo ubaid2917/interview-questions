@@ -218,8 +218,6 @@ console.log(removeFalsy([0,1,false,2,"",3,undefined]))
 
 - Make a function which take N number and make it febinochi series
 
-```
-
 #### Solution
 ```javascript
 function febinochiSeries(num){

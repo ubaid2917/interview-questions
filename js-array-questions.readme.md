@@ -146,6 +146,26 @@ console.log(groupedSameItem([1,2,3,1,2,3,4,5,6,7]))
 ```
 #
 
+#### Solution (without builitin method)
+
+```javascript
+function groupedSameItem(arr){
+  let res = {}; 
+  
+  for(let v of arr){
+    res[v] = res[v] ? [...res[v], v] : [v]
+  } 
+  let grouped = []; 
+
+   for(let key in res){
+    grouped[grouped.length] = res[key]
+   }
+   return grouped
+}
+console.log(groupedSameItem([1,2,3,1,2,3,4,5,6,7]))
+```
+#
+
 ### Question no 4
 
 - Make a function which take array as argument and remove falsy values from array

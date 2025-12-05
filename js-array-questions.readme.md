@@ -403,3 +403,40 @@ console.log(countDuplicate([1,0,0,2,1,7]))
 // { '0': 2, '1': 2 }
 ```
 #
+
+### Question no 10
+
+- You have an array and check if the data type of all element is same or not
+
+### input
+
+```
+let arr = [1,2,3,10,'Hello']
+```
+
+#### Solution (with builtin method)
+```javascript
+
+let arr = [1, 2, 3, 10, 'abc'];
+const allSameType = arr.every(item => typeof(item) == typeof arr[0]) 
+console.log(allSameType) // false
+
+```
+
+#### Solution (without builtin method)
+```javascript
+
+function allSameType(arr) {
+  if(arr.length === 0) return true;
+  let type = typeof arr[0];
+  
+  for(let i = 1; i < arr.length; i++) {
+    if(typeof arr[i] !== type) return false;
+  }
+  return true;
+}
+
+console.log(allSameType([1, 2, 3, 10, 10])) // true
+console.log(allSameType([1, 2, 3, 10, 'hello'])) // false
+```
+#

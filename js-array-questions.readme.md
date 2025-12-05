@@ -240,7 +240,7 @@ console.log(febinochiSeries(5))
 ```
 #
 
-### Question no 5
+### Question no 6
 
 - Write a function to move all the zeros to the end.  
 

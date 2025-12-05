@@ -289,12 +289,25 @@ console.log(moveZero([1,0,0,2,0,3,1,,6,7]))
  [1,0,0,2,0,3,1,6,7]
 
 ```
-### outpt
+### output
 
 ```
 [ 1,0,2,3,6,7] 
 ```
-#### Solution
+#### Solution (with builtin method)
+
+```javascript
+function removeDuplicate(arr){
+  let unique = [...new Set(arr)]; 
+  return unique
+}
+console.log(removeDuplicate([1,0,0,2,0,3,1,6,7]))
+
+// [ 1, 0, 2, 3, 6, 7 ]
+```
+
+
+#### Solution (without builtin method)
 ```javascript
 function removeDuplicate(arr){
    let unique = []; 
@@ -310,8 +323,42 @@ function removeDuplicate(arr){
 }
 console.log(removeDuplicate([1,0,0,2,0,3,1,6,7]))
 
-
 // [ 1, 0, 2, 3, 6, 7 ]
 
+```
+#
+
+### Question no 7
+
+- Write a function and count occurance of each element in array.  
+
+### input
+
+```
+ [1,0,0,2,0,3,1,6,7]
+```
+### output
+
+```
+[ 1,0,2,3,6,7] 
+```
+
+#### Solution 
+```javascript
+function countOccurance(arr){
+  let isSeen = {};
+
+  for(let i = 0; i<arr.length; i++){
+    if(isSeen[arr[i]]){
+      isSeen[arr[i]]++
+    }else{
+      isSeen[arr[i]] = 1
+    }
+  } 
+  return isSeen
+}
+console.log(countOccurance([1,0,0,2,1,7]))
+
+// { '0': 2, '1': 2, '2': 1, '7': 1 }
 ```
 #

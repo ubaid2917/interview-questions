@@ -278,3 +278,40 @@ console.log(moveZero([1,0,0,2,0,3,1,,6,7]))
 
 ```
 #
+
+### Question no 7
+
+- Write a function take array as an argument and remove duplicate item.  
+
+### input
+
+```
+ [1,0,0,2,0,3,1,6,7]
+
+```
+### outpt
+
+```
+[ 1,0,2,3,6,7] 
+```
+#### Solution
+```javascript
+function removeDuplicate(arr){
+   let unique = []; 
+   let isSeen = {};
+
+   for(let i = 0; i<arr.length; i++){
+     if(!isSeen[arr[i]]){
+       unique.push(arr[i])
+       isSeen[arr[i]] = true
+     }
+   } 
+   return unique
+}
+console.log(removeDuplicate([1,0,0,2,0,3,1,6,7]))
+
+
+// [ 1, 0, 2, 3, 6, 7 ]
+
+```
+#

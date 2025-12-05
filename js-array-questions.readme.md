@@ -362,3 +362,44 @@ console.log(countOccurance([1,0,0,2,1,7]))
 // { '0': 2, '1': 2, '2': 1, '7': 1 }
 ```
 #
+### Question no 9
+
+- Write a function and count duplicate item in array 
+
+### input
+
+```
+ [1,0,0,2,0,3,1,6,7]
+```
+### output
+
+```
+[ 1,0,2,3,6,7] 
+```
+
+#### Solution 
+```javascript
+function countDuplicate(arr){
+
+  let isSeen = {};
+  for(let i = 0; i<arr.length; i++){
+    if(isSeen[arr[i]]){
+      isSeen[arr[i]]++
+    }else{
+      isSeen[arr[i]] = 1
+    }
+  } 
+    
+   let duplicates = {}; 
+   for(let key in isSeen){
+     if(isSeen[key] > 1){
+       duplicates[key] = isSeen[key]
+     }
+   }
+   return duplicates
+}
+console.log(countDuplicate([1,0,0,2,1,7]))
+
+// { '0': 2, '1': 2 }
+```
+#

@@ -328,7 +328,7 @@ console.log(removeDuplicate([1,0,0,2,0,3,1,6,7]))
 ```
 #
 
-### Question no 7
+### Question no 8
 
 - Write a function and count occurance of each element in array.  
 

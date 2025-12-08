@@ -440,3 +440,19 @@ console.log(allSameType([1, 2, 3, 10, 10])) // true
 console.log(allSameType([1, 2, 3, 10, 'hello'])) // false
 ```
 #
+
+### Question no 11
+
+- Find the union of the array 
+
+
+#### Solution (with builtin method)
+```javascript
+function union(a, b){
+  return [... new Set([...a, ...b])]; 
+}
+ console.log(union([1,2,3], [1,3,4,5]))
+// [ 1, 2, 3, 4, 5 ]
+```
+
+#

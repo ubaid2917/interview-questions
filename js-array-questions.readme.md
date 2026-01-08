@@ -456,3 +456,51 @@ function union(a, b){
 ```
 
 #
+
+### Question no 12
+
+- You have a below object and store the keys in seprate array 
+
+### input
+
+```
+let obj = {
+  name: "ubaid",
+  email: "ubaid@gmail.com",
+  age: 23,
+  education: "BSCS"
+} 
+```
+### output
+
+```
+['name', 'email', 'age', 'education']
+```
+
+
+#### Solution (with builtin method)
+```javascript
+ let keys = Object.keys(obj)
+```
+
+#### Solution (withput builtin method)
+```javascript
+ let keys = [];
+
+ for(let k in obj){
+  keys.push(k)
+ }
+```
+
+#### Solution 2 (withput builtin method)
+```javascript
+ let keys = [];
+ let index = 0; 
+
+ for(let k in obj){
+  key[index] = k
+  index++
+ }
+```
+
+#

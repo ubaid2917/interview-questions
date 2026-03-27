@@ -29,7 +29,7 @@ where department = 'Finance'
 
 *   You need to add a new employee named John Doe to the employees table with a salary of 50,000 and a department of HR
 
-### Table
+### Query
 
 ```
 INSERT INTO
@@ -40,6 +40,64 @@ VALUES
 
 ### Output
 
-| EMPID | FIRST_NAME | LAST_NAME | DEPARTMENT | SALARY   |
-| ----- | ---------- | --------- | ---------- | -------- |
-| 51    | John       | Doe       | HR         | 50000.00 |
+| EMPID | FIRST\_NAME | LAST\_NAME | DEPARTMENT | SALARY |
+| --- | --- | --- | --- | --- |
+| 51 | John | Doe | HR | 50000.00 |
+#
+
+### Question no 3
+
+*   How would you use the UPDATE statement to modify
+existing records? Increase the salary of increase the salary of all employees in the IT department by 10%
+
+### Query
+
+```
+ update employees 
+ set salary = salary * 1.10
+ where "department" = 'IT'
+```
+#
+
+### Question no 4
+
+*   The HR department has been closed,
+and all employees in HR must be
+removed from the database.
+
+### Query
+
+```
+ delete from employees where "department" = 'HR'
+```
+#
+
+### Question no 5
+
+*   You need to filter employees with salaries
+between 30,000 and 60,000.
+
+### Query
+
+```
+ select * from employees where salary
+ between 30000 and 60000
+```
+#
+
+### Question no 6
+
+*   You need to retrieve employees whose
+salaries are not 40,000.
+
+### Query
+
+```
+ select * from employees where salary
+ != 40000
+```
+#
+
+
+
+

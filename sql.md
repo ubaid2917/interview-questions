@@ -98,6 +98,33 @@ salaries are not 40,000.
 ```
 #
 
+### Question no 7
+
+*   Calculate the number of employees in each department.
+
+### Query
+
+``` 
+select department, count(*) from employees group by department
+```
+#
+
+
+### Question no 8
+
+*   Calculate the total number of employees and  salary of all employees in each department.
+
+### Query
+
+``` 
+select department,
+count(*),
+sum(salary)
+from employees group by department 
+
+```
+#
+
 
 
 

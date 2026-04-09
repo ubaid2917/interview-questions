@@ -24,7 +24,7 @@
 
 ```javascript
 function reverseArr(arr) {
-  let res = arr.reverse(...arr);
+  let res = arr.reverse();
   return res;
 }
 console.log(reverseArr([10, 20, 30, 40, 50, 60, 70, 80]));
@@ -236,7 +236,7 @@ function febinochiSeries(num){
 }
 console.log(febinochiSeries(5))
 
-// [ 0 1 1 2 3 5 ]
+// [ 0 1 1 2 3 ]
 ```
 #
 

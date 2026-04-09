@@ -340,7 +340,7 @@ console.log(removeDuplicate([1,0,0,2,0,3,1,6,7]))
 ### output
 
 ```
-[ 1,0,2,3,6,7] 
+{ '0': 2, '1': 2, '2': 1, '7': 1 }
 ```
 
 #### Solution 
@@ -374,7 +374,7 @@ console.log(countOccurance([1,0,0,2,1,7]))
 ### output
 
 ```
-[ 1,0,2,3,6,7] 
+{ '3': 2, '4': 2 }
 ```
 
 #### Solution 
@@ -398,9 +398,9 @@ function countDuplicate(arr){
    }
    return duplicates
 }
-console.log(countDuplicate([1,0,0,2,1,7]))
+console.log(countDuplicate([1,2,3,4,5,4,3]))
 
-// { '0': 2, '1': 2 }
+// { '3': 2, '4': 2 }
 ```
 #
 

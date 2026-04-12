@@ -474,6 +474,47 @@ console.log(keys);
 // ['name', 'email', 'age', 'education']
 ```
 
+
+### Question 13 — Store Object Keys in a Separate Array
+
+> Given an integer array nums, return true if any value appears more than once in the array, otherwise return false.
+
+
+**Difficulty:** Easy | **Time:** O(n) | **Space:** O(n)
+
+**Example**
+```javascript
+   nums = [1, 2, 3, 3]  // true
+   nums = [1, 2, 3, 4]  // false
+```
+
+**Solution **
+```javascript
+   function hasDuplicate(arr){
+  let isSeen = {}; 
+  
+  for(let i = 0; i<arr.length; i++){
+    if(isSeen[arr[i]]){
+      isSeen[arr[i]] ++
+    }else{
+      isSeen[arr[i]] = 1
+    }
+  }  
+  
+  for(let key in isSeen){
+    if(isSeen[key] > 1){
+      return true
+    }
+  }
+  return false
+}
+console.log(hasDuplicate([1,2,2,3,4]))  // true
+console.log(hasDuplicate([1,0,2,3,4]))  // false
+ 
+```
+
+
+
 ---
 
 *Last updated: April 2026*

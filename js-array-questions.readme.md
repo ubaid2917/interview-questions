@@ -488,7 +488,7 @@ console.log(keys);
    nums = [1, 2, 3, 4]  // false
 ```
 
-**Solution **
+**Solution 1 **
 ```javascript
    function hasDuplicate(arr){
   let isSeen = {}; 
@@ -513,6 +513,22 @@ console.log(hasDuplicate([1,0,2,3,4]))  // false
  
 ```
 
+**Solution 2 **
+```javascript
+   function hasDuplicate(arr){
+  let seen = []; 
+  
+    for(let num of arr){
+      if(seen.includes(num)) return true
+      seen.push(num)
+    }
+
+  return false
+}
+console.log(hasDuplicate([1,2,2,3,4]))  // true
+console.log(hasDuplicate([1,0,2,3,4]))  // false
+ 
+```
 
 
 ---
